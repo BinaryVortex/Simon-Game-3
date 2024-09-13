@@ -37,7 +37,7 @@ body {
   width: 13.12em;
   position: absolute;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Smooth transition */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform for effect */
 }
 
 .color1 {
@@ -120,11 +120,18 @@ body {
   padding: 1em 2em;
   border-radius: 0.3em;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform for effect */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
 }
 
 .container button:hover {
-  background-color: #e0e0e0;
+  background-color: #e0e0e0; /* Lighter color on hover */
+  transform: scale(1.05); /* Slight scaling effect */
+}
+
+.container button:active {
+  transform: scale(0.98); /* Click effect when button is pressed */
+  background-color: #cccccc; /* Darker color when active */
 }
 
 .container p {
@@ -135,12 +142,6 @@ body {
 
 .container span {
   font-weight: 600;
-}
-
-/* Add flash scaling animation */
-.flash {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
 }
 
 @media screen and (max-width: 600px) {

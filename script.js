@@ -125,7 +125,7 @@ const lose = () => {
 
 // Function for winning the game
 const winGame = () => {
-  result.innerHTML = `<span>Congratulations!</span> You Win!`;
+  result.innerHTML = `<span> Congratulations! You completed ${maxRounds} rounds! </span>`;
   result.classList.remove("hide");
   container.classList.remove("hide");
   wrapper.classList.add("hide");
